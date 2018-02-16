@@ -31,17 +31,18 @@ router.get('/', function(req, res, next) {
 
 //#######Post a url#############
 router.post('/', function(req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
   var ids = randomatic('aA0', 8);
   var urls  = new urlModel ({
     urlID: ids,
     url: req.body.url,
-    shortUrl: 'http://188.166.172.54/' + ids
+    shortUrl: 'http://188.166.172.54:3000/' + ids
   });
   urls.save(function(err){
     if(err){
       console.log(err);
     }else{
-      res.send('http://188.166.172.54/' + ids);
+      res.send('http://188.166.172.54:3000/' + ids);
     }
   });
 });
