@@ -17,13 +17,15 @@ var urlModel = mongoose.model('URL', url);
 
 //#####Routes Handlers#####
 //######## Gets the url ##########
-router.get('/', function(req, res, next) {
-  urlModel.findOne({urlID: req.query.urlID}, function(err, url){
+router.get('/:urlID', function(req, res, next) {
+  console.log(req.params.urlID);
+  urlModel.findOne({urlID: req.params.urlID}, function(err, info){
     if(err){
       console.log(err);
+      res.send(err);
     }else{
       console.log(url);
-      res.json(url);
+      res.redirect(info.url);
       console.log('GOT IT');
     }
   });
