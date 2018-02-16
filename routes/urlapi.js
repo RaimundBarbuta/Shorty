@@ -31,7 +31,7 @@ router.get('/', function(req, res, next) {
 
 //#######Post a url#############
 router.post('/', function(req, res, next) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
+
   var ids = randomatic('aA0', 8);
   var urls  = new urlModel ({
     urlID: ids,
