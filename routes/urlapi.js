@@ -33,7 +33,7 @@ router.get('/:urlID', function(req, res, next) {
 
 //#######Post a url#############
 router.post('/', function(req, res, next) {
-
+  console.log("LOOK OUT FOR ME IN THE TERMINALSSSSSSSS -------------")
   var ids = randomatic('aA0', 8);
   var urls  = new urlModel ({
     urlID: ids,
