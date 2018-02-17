@@ -24,8 +24,12 @@ router.get('/:urlID', function(req, res, next) {
       console.log(err);
       res.send(err);
     }else{
-      console.log(url);
-      res.redirect(info.url);
+      console.log(info);
+      if (info != undefined) {
+        res.redirect(info.url);
+      } else {
+        res.send('Info is not defined');
+      }
       console.log('GOT IT');
     }
   });
