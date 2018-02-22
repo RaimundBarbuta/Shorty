@@ -3,7 +3,7 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var randomatic = require('randomatic');
 //#####Connect to mongo db######
-mongoose.connect('mongodb://cubu:mancarica@ds235388.mlab.com:35388/blogbd')
+mongoose.connect('mongodb://****:*********@ds235388.mlab.com:35388/blogbd')
 //#####Create a schema for the db#####
 var Schema = mongoose.Schema;
 
