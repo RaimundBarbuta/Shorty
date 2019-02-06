@@ -1,6 +1,6 @@
 $('#post').click(function(){
   var URL = $('input[name="url"]').val();
-  $.ajax('http://188.166.172.54:3000/', {
+  $.ajax('http://46.101.9.7:3000/', {
     method: 'POST',
     crossDomain: true,
     headers: {
